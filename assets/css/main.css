@@ -103,6 +103,105 @@ h6 {
   background: rgba(198, 16, 0, 0);
 }
 
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.feature-item {
+  max-width: 200px;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #9b622f;
+}
+
+.feature-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.feature-text {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
+
+.collection-layout {
+  display: grid;
+  grid-template-areas:
+    'item1 item2 item3'
+    'item4 item5 item6';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0;
+}
+
+.collection-layout .item {
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+.collection-layout .item .text {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  font-size: 14px;
+}
+
+.collection-layout .item .text b {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.item1 {
+  grid-area: item1;
+  background-image: url('../img/atas_1.jpg');
+}
+.item2 {
+  grid-area: item2;
+  background-image: url('../img/atas_2.jpg');
+}
+.item3 {
+  grid-area: item3;
+  background-image: url('../img/atas_3.jpg');
+}
+.item4 {
+  grid-area: item4;
+  background-image: url('../img/bawah_1.jpg');
+}
+.item5 {
+  grid-area: item5;
+  width: auto;
+  background-image: url('../img/bawah_2.jpg');
+}
+.item6 {
+  grid-area: item6;
+  background-image: url('../img/bawah_3.jpg');
+}
+
+@media (max-width: 768px) {
+  .collection-layout {
+    display: block;
+  }
+  .collection-layout .item {
+    width: 100%;
+    min-height: 200px;
+  }
+}
+
 .pulsating-play-btn:after {
   content: '';
   position: absolute;
